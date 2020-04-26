@@ -1,0 +1,320 @@
+*{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.logo {
+    width: 130px;
+    height: 40px;
+    background-image:  url("logo.JPG");
+    background-size: 130px 40px;
+}
+.hightab {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 40px
+}
+.tab_icon1 {
+    width: 25px;
+    height: 25px;
+    border-radius: 70%;
+    z-index: 10;
+    background-color: rgb(184, 184, 184);
+    position: absolute;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    top: 25px;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+.tab_icon2 {
+    width: 25px;
+    height: 25px;
+    border-radius: 70%;
+    z-index: 10;
+    background-color: rgb(184, 184, 184);
+    position: absolute;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    top: 25px;
+    left: 88%;
+    transform: translate(-50%, -50%);
+}
+.story {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 200px;
+}
+.story1{
+    background-color: burlywood;
+    margin: 10px 4px 10px 8px;
+    width: 110px;
+    height: 180px;
+    border-radius: 15px;
+    background-image: url("storyface.JPG");
+    background-size: 110px 150px;
+    position: relative;
+    overflow: hidden;   
+}
+.make_story {
+    width: 110px;
+    height: 60px;
+    background-color: azure;
+    z-index: 2;
+    position: absolute;
+    top: 85%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: flex;
+    align-items: center;
+}
+
+.story_line {
+    margin: 13px 0px 0px 7px;
+    text-align: center;
+}
+
+.plus_icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    z-index: 4;
+    background-color: cornflowerblue;
+    position: absolute;
+    top: 70%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.story2{
+    background-color: burlywood;
+    margin: 10px 4px 10px 4px;
+    width: 110px;
+    height: 180px;
+    border-radius: 15px;
+    background-image: url("story2.jpg");
+    background-size: 110px 180px;
+}
+.story_name {
+    margin: 100px 0px 0px 5px;
+    text-align: start;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.story_icon{
+    background-color: cornflowerblue;
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    z-index: 3;
+    display: flex;
+}
+
+.story_icon_img {
+    margin: 3px;
+    width: 35px;
+    height: 35px;
+    border-radius: 70%;
+    z-index: 5;
+    background-image: url("ohmy.jpg");
+    background-size: 35px 35px;
+    justify-content: center;
+    align-content: center;
+    color: white;
+}
+.gray{
+    height: 7px;
+    background-color: rgb(219, 219, 219);
+}
+.mystatus {
+    height: 45px;
+    display: flex;
+    margin: 0px 0px;
+}
+.profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    background-image: url("me.jpg");
+    background-size: 40px 40px;
+    margin: 4px 8px
+}
+
+.input{
+    height: 40px;
+    width: 350px;
+    background-color: white;
+    margin: 13px 8px 0px 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.menu {
+    display: flex;
+    justify-content:center;
+    height: 25px;
+    margin: 6px;
+}
+.live {
+    height: 25px;
+    width: 130px;
+    display: flex;
+    justify-content: center
+}
+.picture, .check_in{
+    height: 25px;
+    width: 130px;
+    display: flex;
+    border-left: 1px solid rgb(184, 184, 184);
+    justify-content: center
+}
+
+.picture .material-icons, .check_in .material-icons, .live .material-icons{
+    font-size: 20px;
+}
+
+.picture .div, .check_in.div, .live .div{
+    margin: 1.3px 0px;
+}
+
+
+.content_title {
+    display: flex;
+    margin: 12px 0px 10px 0px;
+}
+
+.title_name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px 0px 2px 0px;
+}
+.content_profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    background-image: url("bbotto.jpg");
+    background-size: 40px 40px;
+    margin: 4px 8px
+}
+.content_info{
+    width: 300px;
+    height: 40px;
+    margin: 0px 8px 4px 8px;
+}
+.content_info_date{
+    display: flex;
+    color: gray;
+}
+.date{
+    margin: 1px 3px 0px 0px;
+}
+.content_info_date .material-icons{
+    font-size: 20px;
+}
+.gallery {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+.img1{
+    width: 230px;
+    height: 338px;
+    background-image: url("bujji.jpg");
+    background-size: 400px;
+    overflow: hidden;
+    margin: 4px 0px 4px 4px;
+}
+.imgcol{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.img2{
+    width: 110px;
+    height: 110px;
+    background-image: url("bujji.jpg");
+    background-size: 110px;
+    margin: 4px 2px 2px 2px;
+}
+.img3, .img4{
+    width: 110px;
+    height: 110px;
+    background-image: url("bujji.jpg");
+    background-size: 110px;
+    margin: 2px;
+}
+.content1 {
+    background-color: peachpuff;
+    display: flex;
+    flex-direction: column;
+    height: 500px
+}
+
+.bar1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.like1 {
+    width: 100px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    color: gray;
+}
+.commentnshare{
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    color: rgb(73, 73, 73);
+    font-size: 15px;
+}
+.comment1{
+    margin: 0px 5px 0px 0px;
+}
+.share1{
+    margin: 0px 10px 0px 0px;
+}
+
+.bar2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: rgb(77, 74, 74);
+}
+
+.like2, .comment2, .share2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.like2 .material-icons, .comment2 .material-icons, .share2 .material-icons{
+    font-size: 20px;
+}
+
+.like1 .material-icons {
+    font-size: 15px;
+}
+
+.last_bar{
+    margin: 7px 0px;
+    display: flex;
+    justify-content: space-around;
+    height: 33px;
+    color: dimgray;
+}
+.last_bar .material-icons{
+    font-size: 29px;
+}
