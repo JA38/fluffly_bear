@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'result.css' %}">
+</head>
+<body>
+    <div class="my_text">입력한 텍스트 정보:)</div>
+    <div class="my_text_n">
+        <div class="my_text_nn">{{text}}</div>
+    </div>
+    <div class="info_box">
+        <div class="total_len">글자수: {{total_len}}</div>
+        <div class="modi_len">공백제외 글자수: {{modi_len}}</div>
+        <div class="count_word">단어수: {{count_word}}</div>
+    </div>
+    
+    
+</body>
+</html>

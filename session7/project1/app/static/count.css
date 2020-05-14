@@ -1,0 +1,23 @@
+.title{
+    text-align: center;
+    height: 80px;
+}
+
+h1{
+    margin: 18px 0px 3px 0px;
+    color: rgb(73, 125, 221);
+}
+
+.mention{
+    color: black;
+}
+
+.put1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input_button{
+    
+}
