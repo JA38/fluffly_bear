@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <input name="title" placeholder="제목을 입력하세요">
+        <input name="content" placeholder="내용을 입력하세요">
+        <select name="category">
+            <option value="">CATEGORY SELECT</option>
+            <option value="movie">영화</option>
+            <option value="drama">드라마</option>
+            <option value="entertain">엔터테인먼트</option>
+        </select>
+        <button type="submit">글 쓰기</button>
+    </form>
+</body>
+</html>
