@@ -1,0 +1,28 @@
+  
+{% extends 'base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}" type='text/css'>
+{% endblock %}
+
+{% block subtitle %}
+    Your To Do list
+{% endblock %}
+
+{% block content %}
+    <div class="textbox">
+        {% for post in posts %}
+        <div class="input_textbox">
+            <span class="material-icons">notifications_active</span>
+            <a href="{% url 'detail' post.pk %}">{{post.title}}</a>
+            <p class="timeuntil">{{post.duedate|timeuntil}} left</p>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <br>
+    <div class="adding">
+        <a class="button" href="{% url 'new' %}">Add more list</a>
+    </div>
+{% endblock content %}

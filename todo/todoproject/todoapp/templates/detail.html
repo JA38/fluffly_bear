@@ -1,0 +1,47 @@
+  
+{% extends 'base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'detail.css' %}" type='text/css'>
+{% endblock %}
+
+{% block subtitle %}
+    <div class="notice">Title:</div> 
+    {{post.title}}
+{% endblock %}
+
+{% block content %}
+    <div class="textbox">
+        <div class="notice">Content:</div>
+         {{post.content}}
+    </div>
+
+    <div class="textbox2">
+        <p class="duedate">Your Duedate is {{post.duedate}}</p>
+        <p class="timeuntil">{{post.duedate|timeuntil}} left</p>
+    </div>
+
+    <div class="comments">
+        {% for comment in post.comments.all %}
+        <div class="comment">
+            <span class="material-icons">reply</span>
+            <div class="comment_cont">{{comment.content}}</div>
+            <a class="del_cont" href="{% url 'delete_comment' post.pk comment.pk %}">DELETE Comment</a>
+        </div>
+        {% endfor%}
+    </div>
+
+    <form class="new_comment" method="POST">
+        {% csrf_token %}
+        <input class="new_content" type="text" name="content" placeholder="Write your comment!">
+        <button class="new_button" type="submit">Add comment</button>
+    </form>
+
+    <div class="bottom">
+        <a class="button" href="{% url 'home' %}">Back to home</a>
+        <a class="button" href="{% url 'edit' post.pk %}">Edit</a>
+        <a class="button" href="{% url 'delete' post.pk %}">Delete</a><br>
+    </div>
+    
+{% endblock %}

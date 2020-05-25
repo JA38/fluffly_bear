@@ -1,0 +1,30 @@
+  
+{% extends 'base.html' %}
+
+{% block css %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'new.css' %}" type='text/css'>
+{% endblock %}
+
+{% block subtitle %}
+    Add your To Do list
+{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <div class="middle">
+            <input class="titleinput" type="text" name="title" value="{{post.title}}" placeholder="Input Title>>">
+        </div>
+        <div class="textbox">
+            <textarea class="contentinput" name="content" cols="30" rows="10" placeholder="Input Content>>">{{post.content}}</textarea>    
+        </div>
+        <div class="textbox2">
+            <label class="label">Deadline: </label>
+            <input class="dueinput" type="date" name="duedate" value="{{post.duedate}}" placeholder="Input Deadline">
+        </div>
+        <div class="bottom">
+            <button class="button" type="submit">Add</button>
+        </div>
+    </form>
+{% endblock %}
