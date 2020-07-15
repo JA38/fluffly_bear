@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+            <h1> hello javascript </h1>
+            <h1> 자바스크립트 </h1>
+        
+            <h1 id="title1">나는 지금</h1>
+            <h1 class="title2">졸리당</h1>
+        
+            <h1 id="title3">멋쟁이</h1>
+            <h1 class="title4">사자처럼</h1>
+    </div>
+    
+
+    <script>
+        // const h1 = document.querySelector('h1');
+        
+        // const changeColor = function(){
+        //     h1.style.color = h1.style.color === 'red' ? 'blue' : 'red'
+        // }
+
+        // setInterval(changeColor, 100)
+        // // h1의 스타일의 컬러가 red면 블루로 바꾸고 그렇지 않으면 레드로 바꾸겠다
+
+        // container를 쓰지 않는 경우
+        // const h1s = document.querySelectorAll('h1')
+        // h1s[0].style.color = 'red';
+        // h1s[1].style.color = 'green' ;
+
+        // const title1 = document.querySelector('#title1');
+        // title1.style.color = 'red';
+        // const title2 = document.querySelector('.title2');
+        // title2.style.color = 'green';
+
+        // const title3 = document.getElementById('title3');
+        // title3.style.color = 'red';
+        // title3.innerText = 'title3';
+        // const title4 = document.getElementsByClassName('title4');
+        // title4[0].style.color = 'blue';
+        // title4[0].innerText = 'title4';
+
+        // container를 쓰는 경우
+        const container = document.querySelector('.container');
+        const title1 = container.querySelector('#title1');
+        title1.style.color = 'red';
+    </script>
+</body>
+
+</html>
