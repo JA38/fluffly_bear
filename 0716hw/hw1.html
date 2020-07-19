@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>과제1</title>
+    <style>
+        .text-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text-box__textarea {
+            border-radius: 5px;
+            box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+            0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="text-box">
+        <h1>글자수 세기:)</h1>
+        <textarea class="text-box__textarea" type="Textbox" cols="45" rows="10"></textarea>
+        <!-- textarea는 여러줄 쓸 수 있고 input은 한줄만 쓸 수 있다 -->
+        <br>
+        <span class="text-box__count"></span>
+        <br>
+        <span class="text-box__countPure"></span>
+    </form>
+
+    <script>
+
+        function letscount() {
+            const form = document.querySelector(".text-box"),
+                textarea = form.querySelector(".text-box__textarea"),
+                count = form.querySelector(".text-box__count"),
+                countPure = form.querySelector(".text-box__countPure");
+            let mytext = textarea.value;
+            let lenmytext = mytext.length;
+            let pureMyText = mytext.replace(/ /g, "");
+            let pureLenMyText = pureMyText.length;
+            // document.f1.t2.value = lenmytext;
+            count.innerText = `글자수는 ${lenmytext} 입니다`;
+            countPure.innerText = `공백제외 글자수는 ${pureLenMyText} 입니다`;
+            setTimeout("letscount() ", 0);
+        }
+        letscount();
+
+    </script>
+
+</body>
+
+</html>

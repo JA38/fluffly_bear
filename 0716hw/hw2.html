@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>과제2</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        div {
+            padding: 23px;
+            border: 1px solid #999999;
+            background-color: white;
+        }
+
+        div.children-active {
+            background-color: rgb(78, 88, 230);
+        }
+
+        div.parent-active {
+            background-color: rgb(255, 217, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <div>
+                                                <div>
+                                                    <div>
+                                                        <div>
+                                                            <div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const divs = document.querySelectorAll("div");
+        console.log(divs);
+
+        function changeColor(event) {
+            divs.forEach(div => {
+                div.classList.remove('children-active', 'parent-active');
+            })
+            let divActive = event.target;
+            let divParent = divActive.parentNode;
+
+            divActive.classList.add(`children-active`);
+            divParent.classList.add(`parent-active`);
+
+        }
+
+        function init() {
+            // cf. for student in students
+            divs.forEach(div => {
+                div.addEventListener('click', changeColor)
+            })
+        }
+        init();
+    </script>
+</body>
+
+</html>
